@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search } from "lucide-react";
+import { User2, Home, Inbox, NotebookText } from "lucide-react";
 
 import {
   Sidebar,
@@ -10,28 +10,29 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import Link from "next/link";
 
 // Menu items.
 const items = [
   {
-    title: "Sewa Mobil",
-    url: "#",
+    title: "Beranda",
+    url: "/beranda",
     icon: Home,
   },
   {
     title: "Pengembalian",
-    url: "#",
+    url: "/",
     icon: Inbox,
   },
   {
     title: "Pelanggan",
     url: "#",
-    icon: Calendar,
+    icon: User2,
   },
   {
     title: "Transaksi",
     url: "#",
-    icon: Search,
+    icon: NotebookText,
   },
 ];
 
@@ -39,26 +40,26 @@ export function SidebarList() {
   return (
     <div className="">
       <Sidebar>
-      <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-    </Sidebar>
+        <SidebarContent>
+          <SidebarGroup>
+            <SidebarGroupLabel>Application</SidebarGroupLabel>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {items.map((item) => (
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton asChild>
+                      <Link href={item.url}>
+                        <item.icon />
+                        <span>{item.title}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        </SidebarContent>
+      </Sidebar>
     </div>
   );
 }

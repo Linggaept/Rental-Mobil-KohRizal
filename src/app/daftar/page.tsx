@@ -1,4 +1,4 @@
-import DaftarForm from "@/components/daftar-form";
+import DaftarForm from "@/features/auth/components/daftar-form";
 
 const Daftar = () => {
   return <DaftarForm />;

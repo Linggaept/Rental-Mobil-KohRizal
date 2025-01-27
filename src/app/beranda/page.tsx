@@ -1,32 +1,76 @@
+"use client";
+
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { SidebarList } from "@/components/sidebar-list";
+import { CalendarRange } from "lucide-react";
+import { Filter } from "lucide-react";
 import Header from "@/components/header";
-import CardProduct from "@/featured/card-product";
-import FilterProduct from "@/featured/filter-product";
+import CardProduct from "@/features/beranda/components/card-product";
+import FilterProduct from "@/features/beranda/components/filter-product";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import HeaderTitle from "@/components/header-title";
 
 const Beranda = () => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
   return (
-    <div className="">
+    <div className="bg-gray-100 w-full">
       <Header />
       <SidebarProvider>
         <SidebarList />
-        <main>
+        <main className=" w-full p-4">
           <SidebarTrigger />
-          <div className="mt-10 ml-4">
-            <h1 className="font-bold text-2xl">Sewa Mobil</h1>
-            <div className="flex gap-10">
-              <div className="w-full grid grid-cols-3 gap-4">
-                <CardProduct />
-                <CardProduct />
-                <CardProduct />
-                <CardProduct />
-                <CardProduct />
-                <CardProduct />
+          <div className="mt-10">
+            <HeaderTitle isSearch>Sewa Mobil</HeaderTitle>
+            <div className="flex gap-4 items-center justify-between mt-4">
+              <div className="flex gap-4 items-center">
+                <p className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full">
+                  <CalendarRange color="red" size={20} />
+                  18-07-2004
+                </p>
+                <p className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full">
+                  <CalendarRange color="red" size={20} />
+                  18-07-2004
+                </p>
+                <p className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full">
+                  <CalendarRange color="red" size={20} />
+                  18-07-2004
+                </p>
+                <p className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full">
+                  <CalendarRange color="red" size={20} />
+                  18-07-2004
+                </p>
+                <p className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full">
+                  <CalendarRange color="red" size={20} />
+                  18-07-2004
+                </p>
               </div>
-              <div className="w-1/8 mt-10 bg-white border border-gray-200 shadow-sm shadow-gray-300 p-4 rounded-lg">
-                <FilterProduct />
-              </div>
+              <Button
+                onClick={() => handleOpenModal()}
+                className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full hover:bg-red-600 text-black hover:text-white"
+              >
+                <Filter color="red" size={20} />
+                Filter
+              </Button>
             </div>
+            <div className="w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+              <CardProduct />
+              <CardProduct />
+              <CardProduct />
+              <CardProduct />
+              <CardProduct />
+              <CardProduct />
+            </div>
+
+            <FilterProduct
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+            />
           </div>
         </main>
       </SidebarProvider>

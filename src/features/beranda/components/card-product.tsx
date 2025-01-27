@@ -13,15 +13,15 @@ import Link from "next/link";
 const CardProduct = () => {
   return (
     <Link href={"/detail"}>
-      <Card className="mt-10">
-        <Image
-          src="/logo.png"
-          alt="logo"
-          width={100}
-          height={100}
-          className="object-cover p-2"
-        />
+      <Card className="">
         <CardHeader>
+          <Image
+            src="/logo.png"
+            alt="logo"
+            width={100}
+            height={100}
+            className="object-cover aspect-square"
+          />
           <CardTitle>Mercedes Benz S-Class</CardTitle>
           <CardDescription>Sedan</CardDescription>
         </CardHeader>

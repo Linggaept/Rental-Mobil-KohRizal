@@ -28,31 +28,31 @@ const Beranda = () => {
           <div className="mt-10">
             <HeaderTitle isSearch>Sewa Mobil</HeaderTitle>
             <div className="flex gap-4 items-center justify-between mt-4">
-              <div className="flex gap-4 items-center">
-                <p className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 items-center">
+                <p className="flex gap-2 items-center text-sm font-normal text-muted-foreground bg-white p-2 rounded-full text-nowrap overflow-hidden">
                   <CalendarRange color="red" size={20} />
                   18-07-2004
                 </p>
-                <p className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full">
+                <p className="flex gap-2 items-center text-sm font-normal text-muted-foreground bg-white p-2 rounded-full text-nowrap overflow-hidden">
                   <CalendarRange color="red" size={20} />
                   18-07-2004
                 </p>
-                <p className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full">
+                <p className="flex gap-2 items-center text-sm font-normal text-muted-foreground bg-white p-2 rounded-full text-nowrap overflow-hidden">
                   <CalendarRange color="red" size={20} />
                   18-07-2004
                 </p>
-                <p className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full">
+                <p className="flex gap-2 items-center text-sm font-normal text-muted-foreground bg-white p-2 rounded-full text-nowrap overflow-hidden">
                   <CalendarRange color="red" size={20} />
                   18-07-2004
                 </p>
-                <p className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full">
+                <p className="flex gap-2 items-center text-sm font-normal text-muted-foreground bg-white p-2 rounded-full text-nowrap overflow-hidden">
                   <CalendarRange color="red" size={20} />
                   18-07-2004
                 </p>
               </div>
               <Button
                 onClick={() => handleOpenModal()}
-                className="flex gap-2 items-center text-sm font-semibold bg-white p-2 rounded-full hover:bg-red-600 text-black hover:text-white"
+                className="flex gap-2 items-center text-sm font-normal text-muted-foreground bg-white p-2 rounded-full hover:bg-red-600 text-black hover:text-white justify-start"
               >
                 <Filter color="red" size={20} />
                 Filter

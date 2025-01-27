@@ -16,7 +16,7 @@ const FilterProduct = ({ isOpen, onClose }: FilterProductProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center backdrop-blur-md bg-white/30 z-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-20 z-50">
       <button onClick={onClose} className="absolute top-0 right-3 ">
         <X size={32} color="red" />
       </button>

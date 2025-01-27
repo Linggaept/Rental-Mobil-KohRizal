@@ -42,7 +42,7 @@ export function SidebarList() {
       <Sidebar>
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupLabel>Application</SidebarGroupLabel>
+            <SidebarGroupLabel>Sewa Mobil Koh Rizal</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
                 {items.map((item) => (
